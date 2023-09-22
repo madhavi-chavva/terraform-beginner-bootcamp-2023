@@ -290,3 +290,10 @@ Error: No valid credential sources found
 
 We have automated this workaround with the following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
 
+Add a alias into the ~/.bash_profile.
+
+```bash
+alias tf="terraform"
+```
+Automate this in the bash script [bin/set_tf_alias]
+
