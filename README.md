@@ -248,3 +248,42 @@ While creating S3 bucket we found out that bucket name should be lower case and 
 #### Error while doing Terraform destroy.
 
 When tring to destroy the S3 bucket I was getting the access denied error 403. So I deleted the bucket in the Aws console and done the **terraform refresh** to sync the changes with the state fila and the resources in the AWS console.
+
+## Issues with Terraform Cloud Login and Gitpod Workspace
+
+When attempting to run `terraform login` it will launch bash a wiswig view to generate a token. However it does not work expected in Gitpod VsCode in the browser.
+
+The workaround is manually generate a token in Terraform Cloud
+
+```
+https://app.terraform.io/app/settings/tokens?source=terraform-login
+```
+
+Then create open the file manually here:
+
+```sh
+touch /home/gitpod/.terraform.d/credentials.tfrc.json
+open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+
+Provide the following code (replace your token in the file):
+
+```json
+{
+  "credentials": {
+    "app.terraform.io": {
+      "token": "YOUR-TERRAFORM-CLOUD-TOKEN"
+    }
+  }
+}
+
+While doing **terraform apply** to migrate the state from local to Remote (terraform cloud) I encountered an error
+
+```
+Error: No valid credential sources found
+│ 
+│   with provider["registry.terraform.io/hashicorp/aws"],
+│   on main.tf line 28, in provider "aws":
+│   28: provider "aws" {
+```
+ **Resolution**: Added the Aws credentials in the terraform cloud variables and marked them as sensitive.
