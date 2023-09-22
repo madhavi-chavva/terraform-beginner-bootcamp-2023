@@ -279,7 +279,7 @@ Provide the following code (replace your token in the file):
 
 While doing **terraform apply** to migrate the state from local to Remote (terraform cloud) I encountered an error
 
-```
+```bash
 Error: No valid credential sources found
 │ 
 │   with provider["registry.terraform.io/hashicorp/aws"],
@@ -287,3 +287,6 @@ Error: No valid credential sources found
 │   28: provider "aws" {
 ```
  **Resolution**: Added the Aws credentials in the terraform cloud variables and marked them as sensitive.
+
+We have automated this workaround with the following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
+
