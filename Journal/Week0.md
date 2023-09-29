@@ -317,6 +317,7 @@ Error: No valid credential sources found
 │   on main.tf line 28, in provider "aws":
 │   28: provider "aws" {
 ```
+
  **Resolution**: Added the Aws credentials in the terraform cloud variables and marked them as sensitive.
 
 We have automated this workaround with the following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
