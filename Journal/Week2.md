@@ -101,5 +101,8 @@ It was not displaying the uuid so we modified the code in the DELETE
 re-tested it.
 ![image](https://github.com/madhavi-chavva/terraform-beginner-bootcamp-2023/assets/125069098/e09f2aad-4d26-4c0e-8c16-7c54c2bca5f1)
 
+## Diagram of HTTP Request to HTTP server
+
+![HTTP Request to HTTP server](https://github.com/madhavi-chavva/terraform-beginner-bootcamp-2023/assets/125069098/c29e2cca-a269-4c66-b643-7c759db88d2e)
 
 
