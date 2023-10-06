@@ -33,6 +33,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# Ignore terraform-provider-terratown
 terraform-provider-terratowns/terraform-provider-terratowns_v*
 
 
