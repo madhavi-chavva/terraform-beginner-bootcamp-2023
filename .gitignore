@@ -33,8 +33,8 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# Ignore files and directories with names containing "source=terraform-login"
-*source=terraform-login*
+# Ignore terraform-provider-terratown
+terraform-provider-terratowns/terraform-provider-terratowns_v*
 
 
 
