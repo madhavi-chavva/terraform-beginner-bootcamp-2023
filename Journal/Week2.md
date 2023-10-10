@@ -105,4 +105,10 @@ re-tested it.
 
 ![HTTP Request to HTTP server](https://github.com/madhavi-chavva/terraform-beginner-bootcamp-2023/assets/125069098/c29e2cca-a269-4c66-b643-7c759db88d2e)
 
+## CRUD
 
+Terraform Provider resources utilize CRUD.
+
+CRUD stands for Create, Read Update, and Delete
+
+[CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
